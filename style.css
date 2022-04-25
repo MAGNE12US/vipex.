@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121213;
+}
+.loader
+{
+    position: relative;
+}
+.loader::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: #03e9f4;
+    animation: blinkCursor 0.8s steps(3) infinite;
+}
+@keyframes blinkCursor 
+{
+    0½,75½
+    {
+        opacity: 1;
+    }
+    76½,100½
+    {
+        opacity: 0;
+    }
+}
+    .loader h2
+{
+    position: relative;
+    color: #03e9f4;
+    letter-spacing: 5px;
+    font-size: 4em;
+    text-transform: uppercase;
+}
